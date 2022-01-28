@@ -18,12 +18,11 @@ export const Grid = styled.main`
   height: 80vh;
   margin: 8vh auto 0;
   grid-template-columns: 35% 65%;
-  grid-auto-rows: 60px minmax(180px, auto);
   gap: 20px;
 `;
 
 export const Heading = styled.h3`
-  margin: 0;
+  margin: 25px;
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 600;

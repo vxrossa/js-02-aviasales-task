@@ -15,7 +15,7 @@ type ButtonToggle = {
 export const StyledSortingCard = styled(Card)`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  max-height: 180px;
+  height: 60px;
   grid-column: 2;
   border: 1px solid ${COLOR_GRAY_LIGHT};
 `;

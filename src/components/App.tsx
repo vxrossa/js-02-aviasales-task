@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SelectPage from './pages/SelectPage';
 import { createGlobalStyle } from 'styled-components';
 import { BG_COLOR } from './common/constants';
+import { RecoilRoot } from 'recoil';
 
 const StyledGlobal = createGlobalStyle`
   body { 
@@ -19,12 +20,14 @@ const StyledGlobal = createGlobalStyle`
 function App() {
   return (
     <>
-      <StyledGlobal />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<SelectPage />} />
-        </Routes>
-      </BrowserRouter>
+      <RecoilRoot>
+        <StyledGlobal />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<SelectPage />} />
+          </Routes>
+        </BrowserRouter>
+      </RecoilRoot>
     </>
   );
 }

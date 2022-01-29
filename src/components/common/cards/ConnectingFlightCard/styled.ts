@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Card } from '../../typography';
 
 export const StyledConnectingCard = styled(Card)`
-  height: 330px;
+  height: 270px;
   margin-bottom: 2rem;
 `;
 

@@ -6,7 +6,7 @@ export interface ITicket {
   // идентификатор компании которая осуществляет перевозку
   companyId: string;
   // Массив идентификаторов перелётов
-  segments: string[];
+  segments: ISegment[];
 }
 
 // Список кодов городов. Мы в каждом билете будем лететь с MOW в EKT
@@ -20,9 +20,9 @@ export interface ISegment {
   // Код города куда летим
   destination: CityCodes;
   // Дата и время вылета в unix времени
-  dateStart: string;
+  start: string;
   // Дата и время прибытия в unix времени
-  dateEnd: string;
+  end: string;
   // Массив кодов городов с пересадками
   stops: CityCodes[];
   // Длительность полета в миллисекундах

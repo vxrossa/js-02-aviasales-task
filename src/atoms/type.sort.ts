@@ -1,4 +1,4 @@
-import { atom } from 'recoil';
+import { atom, selector } from 'recoil';
 
 export type TypeSort = {
   fastest: boolean;
@@ -14,3 +14,13 @@ export const typeSort = atom<TypeSort>({
     optimal: false,
   }
 });
+
+export const getSortType = selector({
+  key: 'getSorting',
+  get: ({ get }) => {
+    const sort = get(typeSort);
+    return Object.keys(sort)
+      .filter((elem) => sort[ elem as keyof TypeSort ] === true)
+      .join('');
+  }
+})

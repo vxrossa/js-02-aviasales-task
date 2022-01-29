@@ -1,7 +1,7 @@
 import { StyledFlightCard } from './styled';
 
-const FlightCard = () => {
-  return <StyledFlightCard>hello world</StyledFlightCard>;
+const FlightCard: React.FC<React.ReactNode> = ({children}) => {
+  return <StyledFlightCard>{children}</StyledFlightCard>;
 };
 
 export default FlightCard;

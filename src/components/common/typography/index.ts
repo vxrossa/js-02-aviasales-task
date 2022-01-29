@@ -17,20 +17,21 @@ export const Grid = styled.main`
   width: 50%;
   height: 80vh;
   margin: 8vh auto 0;
-  grid-template-columns: 35% 65%;
+  grid-template-columns: 300px 550px;
   gap: 20px;
 `;
 
 export const Heading = styled.h3`
-  margin: 25px;
-  font-size: 1rem;
+  margin: 18px;
+  font-size: 13px;
   text-transform: uppercase;
   font-weight: 600;
   color: ${COLOR_BLACK};
 `;
 
 export const StyledListItem = styled.li`
-  height: 3rem;
+  height: 40px;
+  width: 100%;
   display: flex;
   align-items: center;
   padding-left: 1rem;

@@ -15,9 +15,10 @@ type ButtonToggle = {
 export const StyledSortingCard = styled(Card)`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 60px;
+  height: 52px;
   grid-column: 2;
   border: 1px solid ${COLOR_GRAY_LIGHT};
+  margin-bottom: 1rem;
 `;
 
 export const StyledSortingButton = styled.button<ButtonToggle>`
@@ -25,7 +26,7 @@ export const StyledSortingButton = styled.button<ButtonToggle>`
   width: 100%;
   outline: 0;
   border: 1px solid ${COLOR_GRAY_LIGHT};
-  font-size: 0.9rem;
+  font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
   ${props => {

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLOR_BLACK, COLOR_WHITE } from '../constants';
+import { COLOR_BLACK, COLOR_HOVER, COLOR_WHITE } from '../constants';
 
 type ShadowToggle = {
   isShadowDisabled?: boolean;
@@ -27,4 +27,18 @@ export const Heading = styled.h3`
   text-transform: uppercase;
   font-weight: 600;
   color: ${COLOR_BLACK};
+`;
+
+export const StyledListItem = styled.li`
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  cursor: pointer;
+  &:hover {
+    background-color: ${COLOR_HOVER};
+  }
+  & > * {
+    cursor: pointer;
+  }
 `;

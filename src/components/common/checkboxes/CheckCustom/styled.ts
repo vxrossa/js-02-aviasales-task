@@ -26,13 +26,4 @@ export const StyledLabel = styled.label`
   }
 `;
 
-export const StyledListItem = styled.li`
-  height: 3rem;
-  display: flex;
-  align-items: center;
-  padding-left: 1rem;
-  &:hover {
-    background-color: ${COLOR_HOVER};
-  }
-`;
 

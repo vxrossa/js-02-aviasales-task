@@ -32,7 +32,17 @@ const ConnectingFlightCard = () => {
   const [checkedValues, setCheckedValues] = useRecoilState(connectingFilters);
 
   const toggleConnect = (event: any) => {
-    setCheckedValues(state => state);
+    if (checkedValues[event.target.id as keyof IConnectingFilters]) {
+      setCheckedValues(state => ({
+        ...state,
+        [event.target.id]: false,
+      }));
+    } else {
+      setCheckedValues(state => ({
+        ...state,
+        [event.target.id]: true,
+      }));
+    }
   };
 
   const connectCheckboxes = useMemo(() => {
@@ -47,7 +57,7 @@ const ConnectingFlightCard = () => {
         />
       );
     });
-  }, [connectFlightsArray]);
+  }, [checkedValues]);
 
   return (
     <StyledConnectingCard>

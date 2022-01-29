@@ -19,16 +19,14 @@ const StyledGlobal = createGlobalStyle`
 
 function App() {
   return (
-    <>
-      <RecoilRoot>
-        <StyledGlobal />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<SelectPage />} />
-          </Routes>
-        </BrowserRouter>
-      </RecoilRoot>
-    </>
+    <RecoilRoot>
+      <StyledGlobal />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<SelectPage />} />
+        </Routes>
+      </BrowserRouter>
+    </RecoilRoot>
   );
 }
 

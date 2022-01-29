@@ -11,7 +11,7 @@ export interface IConnectingFilters {
 export const connectingFilters = atom<IConnectingFilters>({
   key: 'connecting',
   default: {
-    connectall: false,
+    connectall: true,
     connect0: false,
     connect1: false,
     connect2: false,

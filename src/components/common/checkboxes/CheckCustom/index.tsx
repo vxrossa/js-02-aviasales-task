@@ -1,4 +1,5 @@
-import { StyledInputCheckbox, StyledLabel, StyledListItem } from './styled';
+import { StyledListItem } from '../../typography';
+import { StyledInputCheckbox, StyledLabel } from './styled';
 
 type Checkbox = {
   label: string;
@@ -10,7 +11,7 @@ type Checkbox = {
 const CheckCustom: React.FC<Checkbox> = ({ label, id, checked, onClick }) => {
   return (
     <StyledListItem onClick={onClick}>
-      <StyledInputCheckbox type="checkbox" id={id} checked={checked} />
+      <StyledInputCheckbox type="checkbox" id={id} checked={checked} readOnly/>
       <StyledLabel htmlFor={id}>{label}</StyledLabel>
     </StyledListItem>
   );

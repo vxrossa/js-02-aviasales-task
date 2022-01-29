@@ -45,4 +45,7 @@ export const StyledSortingButton = styled.button<ButtonToggle>`
     color: ${COLOR_BLACK};
     background-color: ${COLOR_HOVER};
   }
+  &:active {
+    opacity: 0.6;
+  }
 `;

@@ -49,4 +49,7 @@ export const StyledSortingButton = styled.button<ButtonToggle>`
   &:active {
     opacity: 0.6;
   }
+  @media screen and (max-width: 930px) {
+    font-size: 11px;
+  }
 `;

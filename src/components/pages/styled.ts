@@ -6,4 +6,7 @@ export const LeftRow = styled.nav`
 
 export const RightRow = styled.section`
   grid-column: 2;
+  @media screen and (max-width: 930px) {
+    grid-column: 1;
+  }
 `;

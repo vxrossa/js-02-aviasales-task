@@ -14,11 +14,14 @@ export const Card = styled.div<ShadowToggle>`
 
 export const Grid = styled.main`
   display: grid;
-  width: 50%;
+  min-width: 50%;
   height: 80vh;
   margin: 0 auto;
   grid-template-columns: 300px 550px;
   gap: 20px;
+  @media screen and (max-width: 930px) {
+    grid-template-columns: 70vw;
+  }
 `;
 
 export const Heading = styled.h3`

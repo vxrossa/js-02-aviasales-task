@@ -4,7 +4,7 @@ import { COLOR_BLACK, COLOR_GRAY_MEDIUM } from '../../constants';
 export const StyledSegmentGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 45px;
+  height: auto;
   width: 100%;
 `;
 

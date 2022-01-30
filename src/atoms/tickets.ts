@@ -1,4 +1,4 @@
-import { atom } from 'recoil';
+import { atom, selector } from 'recoil';
 import { ITicket } from '../types';
 
 export const ticketsList = atom<ITicket[]>({
@@ -9,4 +9,10 @@ export const ticketsList = atom<ITicket[]>({
 export const ticketsPage = atom<number>({
   key: 'ticketsPage',
   default: 1,
-})
+});
+
+export const resetTicketsPage = selector({
+  key: 'resetTickets',
+  get: ({ get }) => get(ticketsPage),
+  set: ({ set }, value) => set(ticketsPage, value as number),
+});

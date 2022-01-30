@@ -4,5 +4,5 @@ import { Card } from "../../typography";
 export const StyledFlightCard = styled(Card)`
   height: auto;
   width: 100%;
-  padding: 15px;
+  padding: 20px;
 `

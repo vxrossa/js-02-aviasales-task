@@ -4,7 +4,7 @@ export interface ITicket {
   // Цена в рублях
   price: number;
   // идентификатор компании которая осуществляет перевозку
-  companyId: string;
+  companyId: ICompany;
   // Массив идентификаторов перелётов
   segments: ISegment[];
 }

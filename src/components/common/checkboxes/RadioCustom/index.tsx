@@ -6,14 +6,18 @@ type Radio = {
   label: string;
   id: string;
   checked?: boolean;
+  onClick?: () => void;
 }
 
-const RadioCustom: React.FC<Radio> = ({ label, id, checked }) => {
+const RadioCustom: React.FC<Radio> = ({ label, id, checked, onClick }) => {
   const [ active, setActive ] = useState(checked);
 
   return (
-    <StyledListItem onClick={() => setActive(true)}>
-      <StyledInputRadio type="radio" id={id} name='companies' checked={active}/>
+    <StyledListItem onClick={() => {
+      setActive(true);
+      if (onClick) onClick();
+    }}>
+      <StyledInputRadio type="radio" id={id} name='companies' checked={active} readOnly/>
       <StyledRadioLabel htmlFor={id}>
         {label}
       </StyledRadioLabel>

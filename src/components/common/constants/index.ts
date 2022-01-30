@@ -6,3 +6,4 @@ export const COLOR_GRAY_LIGHT = '#DFE5EC';
 export const COLOR_GRAY_MEDIUM = '#A0B0B9';
 export const COLOR_BLACK = `#4A4A4A`;
 export const COLOR_BLUE = '#2196F3';
+export const COLOR_BLUE_HOVER = '#1A83D7';

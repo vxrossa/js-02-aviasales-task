@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useSetRecoilState } from 'recoil';
+import { ticketsPage } from '../../../../atoms/tickets';
 import { typeSort } from '../../../../atoms/type.sort';
 import { StyledSortingButton, StyledSortingCard } from './styled';
 
@@ -12,6 +13,7 @@ type SortingButtons = {
 
 const FlightSortingCard = () => {
   const [sorting, setSorting] = useRecoilState(typeSort);
+  const resetPage = useSetRecoilState(ticketsPage);
 
   const resetSorting = () => {
     setSorting({
@@ -65,6 +67,7 @@ const FlightSortingCard = () => {
             toggled={elem.stateToggle}
             key={elem.key}
             onClick={() => {
+              resetPage(1);
               resetSorting();
               elem.function();
             }}

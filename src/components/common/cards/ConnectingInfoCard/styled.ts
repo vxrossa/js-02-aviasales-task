@@ -19,13 +19,14 @@ export const StyledSegmentColumn = styled.div`
 
 export const StyledUpperText = styled.p`
   color: ${COLOR_GRAY_MEDIUM};
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
   margin: 0;
 `;
 
 export const StyledLowerText = styled.p`
   color: ${COLOR_BLACK};
-  font-size: 12px;
+  font-size: 14px;
+  min-height: 16px;
   margin: 0;
 `

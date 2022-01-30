@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLOR_BLUE, COLOR_HOVER } from '../../constants';
+import { COLOR_BLUE } from '../../constants';
 import check from '../../../../assets/checkbox.svg';
 
 export const StyledInputCheckbox = styled.input`
@@ -8,7 +8,7 @@ export const StyledInputCheckbox = styled.input`
   opacity: 0;
 `;
 
-export const StyledLabel = styled.label`
+export const StyledInputLabel = styled.label`
   display: flex;
   &::before{
     content: '';

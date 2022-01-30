@@ -1,12 +1,13 @@
 import { Heading } from '../../typography';
 import { StyledCompaniesCard } from './styled';
-import { useState, useEffect, useMemo } from 'react';
+import { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import { companiesList } from '../../../../atoms/companies';
 import { ICompany } from '../../../../types';
+import RadioCustom from '../../checkboxes/RadioCustom';
 
 const CompaniesCard = () => {
-  const [ companies, setCompanies ] = useRecoilState(companiesList);
+  const [companies, setCompanies] = useRecoilState(companiesList);
 
   useEffect(() => {
     const fetchCompanies = async (): Promise<ICompany[]> => {
@@ -21,14 +22,16 @@ const CompaniesCard = () => {
     fetchCompanies().then(data => setCompanies(data));
   }, []);
 
-  const companiesRadioButtons = companies ? companies.map((elem: ICompany, index) => {
-    return <p key={index}>{elem.name}</p>;
-  }) : null;
+  const companiesRadioButtons = companies
+    ? companies
+        .map((elem: ICompany, index) => <RadioCustom key={index} id={elem.id} label={elem.name} />)
+        .concat(<RadioCustom id={'all'} label="Все" checked={true} />)
+        .reverse()
+    : null;
 
   return (
     <StyledCompaniesCard>
       <Heading>Компания</Heading>
-      <p>Все</p>
       {companiesRadioButtons}
     </StyledCompaniesCard>
   );

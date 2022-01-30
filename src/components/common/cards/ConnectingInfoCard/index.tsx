@@ -4,7 +4,7 @@ import { StyledLowerText, StyledSegmentColumn, StyledSegmentGrid, StyledUpperTex
 
 const ConnectingInfoCard: FC<ISegment> = (segment) => {
   const { start, end, origin, destination, stops, duration } = segment;
-  const stopsList = stops.length > 0 ? stops.join(', ') : ' ';
+  const stopsList = stops.length > 0 ? stops.join(', ') : '';
 
   const stopsText = () => {
     if (stops.length === 1) return 'пересадка'

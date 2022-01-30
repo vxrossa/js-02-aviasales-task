@@ -16,7 +16,7 @@ export const Grid = styled.main`
   display: grid;
   width: 50%;
   height: 80vh;
-  margin: 8vh auto 0;
+  margin: 0 auto;
   grid-template-columns: 300px 550px;
   gap: 20px;
 `;
@@ -36,10 +36,16 @@ export const StyledListItem = styled.li`
   align-items: center;
   padding-left: 1rem;
   cursor: pointer;
+  position: relative;
   &:hover {
     background-color: ${COLOR_HOVER};
   }
   & > * {
     cursor: pointer;
   }
+`;
+
+export const StyledLogo = styled.img`
+  display: block;
+  margin: 20px auto;
 `;

@@ -7,10 +7,10 @@ import { connectingFilters, IConnectingFilters } from '../../../../atoms/connect
 
 const ConnectingFlightCard = () => {
   const connectFlightsArray = [
-    {
-      id: 'connectall',
-      text: 'Все',
-    },
+    // {
+    //   id: 'connectall',
+    //   text: 'Все',
+    // },
     {
       id: 'connect0',
       text: 'Без пересадок',
@@ -31,16 +31,16 @@ const ConnectingFlightCard = () => {
 
   const [checkedValues, setCheckedValues] = useRecoilState(connectingFilters);
 
-  const toggleConnect = (event: any) => {
-    if (checkedValues[event.target.id as keyof IConnectingFilters]) {
+  const toggleConnect = (event: React.MouseEvent) => {
+    if (checkedValues[(event.target as HTMLElement).id as keyof IConnectingFilters]) {
       setCheckedValues(state => ({
         ...state,
-        [event.target.id]: false,
+        [(event.target as HTMLElement).id]: false,
       }));
     } else {
       setCheckedValues(state => ({
         ...state,
-        [event.target.id]: true,
+        [(event.target as HTMLElement).id]: true,
       }));
     }
   };
@@ -53,7 +53,7 @@ const ConnectingFlightCard = () => {
           key={elem.id}
           id={elem.id}
           checked={checkedValues[elem.id as keyof IConnectingFilters]}
-          onClick={(e: any) => toggleConnect(e)}
+          onClick={(e: React.MouseEvent<HTMLElement>) => ((e.target as HTMLElement).id !== '' ? toggleConnect(e) : null)}
         />
       );
     });
